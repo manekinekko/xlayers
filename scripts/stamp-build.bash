@@ -10,7 +10,7 @@ then
    version="$b+sha.$v"
 else
    v=`echo $GITHUB_SHA | cut -c1-8`
-   version="build: $v"
+   version="#$v"
 fi
 
 ## replease _BUILD_HASH_ with the current build number
