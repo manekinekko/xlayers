@@ -14,7 +14,7 @@ else
 fi
 
 ## replease _BUILD_HASH_ with the current build number
-perl -i -pe "s/_BUILD_HASH_/$version/g" dist/ui/index.html
+perl -i -pe "s/_BUILD_HASH_/$version/g" dist/html/*.js
 
 status=$?
 if [ $status -eq 0 ];then
