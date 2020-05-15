@@ -116,6 +116,5 @@
     "tslint": "~6.0.0",
     "typescript": "3.7.5",
     "wepback": "^1.0.0"
-  },
-  "type": "module"
+  }
 }
