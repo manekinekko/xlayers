@@ -29,7 +29,12 @@ jobs:
         app_location: '/' # App source code path
         api_location: 'api' # Api source code path - optional
         app_artifact_location: 'dist/html' # Built app content directory - optional
+        app_build_command: 'npm run e2e && npm test.ci && npm run build' 
         ###### End of Repository/Build Configurations ######
+      env:
+        CI: 1
+        NODE_OPTIONS: '--max_old_space_size=4096'
+        PRE_BUILD_COMMAND: 'apt-get update && apt-get install -y libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb --no-install-recommends'
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
